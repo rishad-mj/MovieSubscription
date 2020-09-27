@@ -1,0 +1,15 @@
+﻿@model MovieSubscription.Models.MovieCollection
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movies</h2>
+
+<ul>
+
+    @foreach (var mv in Model.Movies)
+    {
+    <li>@Html.ActionLink(mv.Name,"Details","Movies",new {id= mv.ID },null)</li>
+    }
+</ul>
