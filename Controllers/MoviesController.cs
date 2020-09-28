@@ -14,13 +14,13 @@ namespace MovieSubscription.Controllers
         public ActionResult index()
         {
             Movie mv = new Movie() { Name = "Shrek!" };
-            var movies = new List<Movie>
-            {
-                new Movie{ID=1,Name="Shrek" },
-                new Movie{ID=2, Name="Wall-e" }
-            };
+            //var movies = new List<Movie>
+            //{
+            //    new Movie{ID=1,Name="Shrek" },
+            //    new Movie{ID=2, Name="Wall-e" }
+            //};
             MovieCollection movieCollection = new MovieCollection();
-            movieCollection.Movies = movies;
+            //movieCollection.Movies = movies;
             return View(movieCollection);
         }
         // GET: Movies

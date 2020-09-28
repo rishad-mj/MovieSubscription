@@ -17,9 +17,13 @@ namespace MovieSubscription.Controllers
             return View(GetCustomers());
         }
 
+        public ActionResult New()
+        {
+            return View();
+        }
         public ActionResult Details(int ID)
         {
-            Customer cust = GetCustomers().CustomerList.Find(c => c.ID == ID);
+            Customer cust = GetCustomers().CustomerList.Find(c => c.Id == ID);
             return View(cust);
         }
         private Customers GetCustomers()
@@ -27,8 +31,8 @@ namespace MovieSubscription.Controllers
             Customers CustomerList = new Customers();
             var customers = new List<Customer>
             {
-                new Customer{ID=1, Name="John Smith"},
-                new Customer{ID=2, Name="Marry Williams"}
+                new Customer{Id=1, Name="John Smith"},
+                new Customer{Id=2, Name="Marry Williams"}
             };
             CustomerList.CustomerList = customers;
             return CustomerList;
