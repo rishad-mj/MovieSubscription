@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace MovieSubscription.Controllers
 {
+    [AllowAnonymous]
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -17,7 +18,9 @@ namespace MovieSubscription.Controllers
         {
             ViewBag.Message = "Your application description page.";
 
-            return View();
+            throw new Exception();
+
+            //return View();
         }
 
         public ActionResult Contact()

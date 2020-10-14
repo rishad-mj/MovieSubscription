@@ -1,15 +1,14 @@
 using Microsoft.Owin;
 using Owin;
-
-[assembly: OwinStartup(typeof(MovieSubscription.StartupOwin))]
+[assembly: OwinStartup(typeof(MovieSubscription.Startup))]
 
 namespace MovieSubscription
 {
-    public partial class StartupOwin
+    public partial class Startup
     {
         public void Configuration(IAppBuilder app)
         {
-            //AuthStartup.ConfigureAuth(app);
+            ConfigureAuth(app);
         }
     }
 }
