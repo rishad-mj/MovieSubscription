@@ -21,6 +21,8 @@ namespace MovieSubscription.Controllers.Api
         }
         //GET/api/customers
         //public IEnumerable<CustomerDTO> Getcustomers()
+        //[RequireHttps]
+        [HttpGet]
         public IHttpActionResult  Getcustomers()
         {
             return Ok(_mockContext.Customers.Select(AutoMapperConfig.Mapper.Map<Customer,CustomerDTO>));

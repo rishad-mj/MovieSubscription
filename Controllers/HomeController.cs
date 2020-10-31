@@ -7,10 +7,11 @@ using System.Web.Mvc;
 namespace MovieSubscription.Controllers
 {
     [AllowAnonymous]
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         public ActionResult Index()
         {
+            //throw new Exception();
             return View();
         }
 

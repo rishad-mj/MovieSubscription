@@ -9,13 +9,18 @@ using System.Web.Mvc;
 namespace MovieSubscription.Controllers
 {
    
-    public class CustomersController : Controller
+    public class CustomersController : BaseController
     {
         // GET: Customers
 
         private MockDbContext _mockDbcontext = new MockDbContext();
-   
-        public ViewResult Index()
+
+
+        public ActionResult TestNew()
+        {
+            return View();
+        }
+       public ViewResult Index()
         {
             //var memShiptypes = _mockDbcontext.MembershipTypes;
             return View();
